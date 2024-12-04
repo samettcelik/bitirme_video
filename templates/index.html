@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duygu Analizi Sistemi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .start-button {
+            background: #27ae60;
+            color: white;
+        }
+
+        .stop-button {
+            background: #c0392b;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-header h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+        }
+
+        .video-feed {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .console-output {
+            height: 400px;
+            overflow-y: auto;
+            background: #1e1e1e;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Consolas', monospace;
+            line-height: 1.5;
+        }
+
+        .console-line {
+            margin-bottom: 5px;
+            padding: 3px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .score-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .score-value {
+            font-size: 1.2em;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .controls {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+
+        .speech-output {
+            height: 200px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .speech-line {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Duygu Analizi Sistemi</h1>
+        <p>Gerçek zamanlı yüz ve ses duygu analizi</p>
+    </div>
+
+    <div class="controls">
+        <button class="button start-button" onclick="startAnalysis()">Analizi Başlat</button>
+        <button class="button stop-button" onclick="stopAnalysis()">Analizi Durdur</button>
+    </div>
+
+    <div class="main-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Video Görüntüsü</h2>
+            </div>
+            <img src="{{ url_for('video_feed') }}" alt="Video akışı" class="video-feed">
+            <div class="results">
+                <div class="score-item">
+                    <span class="score-label">Stres Puanı:</span>
+                    <span class="score-value" id="stressScore">-</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Eşleşme Puanı:</span>
+                    <span class="score-value" id="matchScore">-</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Genel Analiz Puanı:</span>
+                    <span class="score-value" id="generalScore">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Analiz Sonuçları</h2>
+            </div>
+            <div class="console-output" id="console"></div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Konuşma Metni</h2>
+            </div>
+            <div class="speech-output" id="speechText"></div>
+        </div>
+
+    </div>
+
+    <script>
+        let analysisActive = false;
+
+        function startAnalysis() {
+            if (!analysisActive) {
+                fetch('/start_analysis')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            analysisActive = true;
+                            document.querySelector('.start-button').disabled = true;
+                            document.querySelector('.stop-button').disabled = false;
+                            updateScores(data.results);
+                        }
+                    })
+                    .catch(error => console.error('Analiz başlatma hatası:', error));
+            }
+        }
+
+        function stopAnalysis() {
+            if (analysisActive) {
+                fetch('/stop_analysis')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            analysisActive = false;
+                            document.querySelector('.start-button').disabled = false;
+                            document.querySelector('.stop-button').disabled = true;
+                        }
+                    })
+                    .catch(error => console.error('Analiz durdurma hatası:', error));
+            }
+        }
+
+        function updateScores(results) {
+            if (results) {
+                document.getElementById('stressScore').textContent = results.stress_score;
+                document.getElementById('matchScore').textContent = results.match_bonus;
+                document.getElementById('generalScore').textContent = results.general_score;
+            }
+        }
+
+        function updateConsole() {
+            fetch('/console_output')
+                .then(response => response.json())
+                .then(data => {
+                    const console = document.getElementById('console');
+                    data.messages.forEach(message => {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.className = 'console-line';
+                        messageDiv.textContent = message;
+                        console.appendChild(messageDiv);
+                    });
+                    console.scrollTop = console.scrollHeight;
+                })
+                .catch(error => console.error('Konsol güncelleme hatası:', error));
+        }
+
+        // Konsol güncelleme aralığı
+        setInterval(updateConsole, 100);
+
+        // Sayfa yüklendiğinde stop butonunu devre dışı bırak
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.stop-button').disabled = true;
+        });
+
+
+
+        function updateSpeechText() {
+            fetch('/get_speech_text')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.texts && data.texts.length > 0) {
+                        const speechDiv = document.getElementById('speechText');
+                        data.texts.forEach(text => {
+                            const textDiv = document.createElement('div');
+                            textDiv.className = 'speech-line';
+                            textDiv.textContent = text;
+                            speechDiv.appendChild(textDiv);
+                        });
+                        speechDiv.scrollTop = speechDiv.scrollHeight;
+                    }
+                })
+                .catch(error => console.error('Konuşma metni güncelleme hatası:', error));
+        }
+
+        // Konuşma metni güncelleme aralığı
+        setInterval(updateSpeechText, 1000);
+
+    </script>
+</body>
+
+</html>
