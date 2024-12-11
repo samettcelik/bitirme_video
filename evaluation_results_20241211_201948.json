@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T20:19:48.026798",
+  "question_id": "6759c87e73be7d7009874e35",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu konuşma metni, belirtilen soruya hiçbir şekilde bir cevap vermiyor. Bu nedenle, bilgi doğruluğu ve verilen bilgilerin tamamlanması açısından yetersizdir. İçeriği açıkça anlaşılmadığı için metin, kaynakları veya çalışma deneyimlerini belirtmiyor. Ayrıca, metin bir konsepti açıklamak veya örneklendirmek için hiçbir örnek sunmamaktadır.\n\n- Genel ve Doğru Bilgi: 0/50\n- Örneklerle Anlatım: 0/30\n- Çalışma Deneyimleri: 0/20\n\nToplam: 0/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

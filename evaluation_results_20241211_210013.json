@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T21:00:13.160298",
+  "question_id": "6759d202637b3f290be4bf0a",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Verilen metin, sorulan soruyu ne yanıtlıyor ne de bir konuyu düzgün bir şekilde ele alıyor. Bu noktadan dolayı metin, genel ve doğru bilgi konusunda puan alamaz çünkü sorulan sorunun ne olduğunu bile bilmiyoruz. Ayrıca belirlenen konuyu anlamak ve hiç bir şekilde örnekler verilmiyor, bu yüzden örneklerle anlatım için de puan alamaz. Metinde çalışma deneyimi ve bunu vurgulayan ifadeler yok. \n\nToplam: 0/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T23:58:24.397461",
+  "question_id": "675758be263fae1699dbc367",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu konuşma metni, belirtilen soruyla ilgili herhangi bir bilgi ya da anektot içermediği için değerlendirilemez. Soru belirli değil ve konuşma metni de spesifik herhangi bir konu hakkında bilgi vermiyor. Konuşma metni, bir cevap oluşturmak için yeterli bilgi veya anlayış sağlamıyor. Ayrıca, konuşmanın herhangi bir çalışma deneyiminden bahsetmediği de gözlemlenebilir. Dolayısıyla bu cevap, belirtilen kriterler temel alındığında puan alamaz. \n\nToplam: 0 Puan"
+  },
+  "source_file": "konusma_metni.txt"
+}

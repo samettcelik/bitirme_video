@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T00:57:34.019832",
+  "question_id": "6758b7e578417637000f962b",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu metni değerlendirebiliriz ancak baştaki sorunun ('A') tam içeriğini bilmiyoruz. Bu nedenle, metnin genel ve doğru bilgi sağlama konusunda ne kadar etkili olduğunu belirlemek zor. Ancak, metin genellikle belirsiz, tamamlanmamış cümleler ve rastgele kelimeler içerdiği için, bir bilgi verme amacını ya da özgün bir konuda bir açıklama sağlama amacını karşılamamaktadır. Bu durumda, genel ve doğru bilgi için 0 puan verebiliriz.\n\nÖrneklerle anlatım konusunda da metin belirli bir konuya odaklanmadığı ve özgün bir durumla ilgili bir ya da daha fazla örnek vermeme eğiliminde olduğu için 0 puan verebiliriz.\n\nÇalışma deneyimleri konusunda, metinde bu tür bir bilgi veya ifade yok. Konuşmacı çalıştığı alanlardan veya kendisinin konuyla ilişkisinden bahsetmemektedir, bu yüzden 0 puan veriyoruz.\n\nToplam: 0 puan."
+  },
+  "source_file": "konusma_metni.txt"
+}

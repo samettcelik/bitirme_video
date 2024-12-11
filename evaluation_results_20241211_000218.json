@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T00:02:18.742425",
+  "question_id": "6758ab2d5be3644fb7a77d8b",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu metin, konuşulan bir dili çevirmeye çalışan bir otomatik çeviri sistemi tarafından oluşturulmuş görünüyor ve büyük ihtimalle bir şarkı söyleyen kişiyi çevirmeye çalışıyor. Ancak talebe uyan bir soruda belirtilmediği için değerlendirmek ya da puanlamak pek mümkün değil. Eksiksiz ve doğru bir değerlendirme yapabilmek için konuşmanın değerlendirileceği bir soru bağlamına ihtiyaç duyuluyor. Bu durum karşısında puan verme işlemi yapılamaz."
+  },
+  "source_file": "konusma_metni.txt"
+}

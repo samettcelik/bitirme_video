@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T21:07:28.862395",
+  "question_id": "6759d202637b3f290be4bf0a",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu konuşma metni, belirtilen kriterler doğrultusunda aşağıdaki şekilde değerlendirebiliriz:\n\n- Genel ve Doğru Bilgi (0/50): Soru metni bulunmadığı için konuşma metninin bu kritere uygun olup olmadığını değerlendirmek imkansız. Ayrıca, metinde net bir bilgi veya konuşulan konu da mevcut değil.\n\n- Örneklerle Anlatım (0/30): Konuşma metninde örnek vererek anlatılan herhangi bir konu bulunmuyor.\n\n- Çalışma Deneyimleri (0/20): Konuşma metninde konuşmacının çalıştığı alanlardan veya kendisinin konularla bağlantısından herhangi bir şekilde bahsedilmiyor.\n\n- Not: Bu metinde ki dilbilgisi ve cümle kalıpları çok yanıltıcı ve düzensiz. Anlama katkı sağlamaz, inceleme veya tolerans gerektirmez.\n\nToplam : 0 puan"
+  },
+  "source_file": "konusma_metni.txt"
+}

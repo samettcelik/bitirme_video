@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T01:08:02.020392",
+  "question_id": "6758ba8c78417637000f963c",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Konuşma metni hiçbir şekilde belirtilen soruya yanıt vermemekte ve dolayısıyla ölçüm kriterlerimize uygun değildir. \n\n- Genel ve Doğru Bilgi (0/50): Metin, belirtilen soruyu yanıtlamamaktadır. \n- Örneklerle Anlatım (0/30): Metinde herhangi bir konuyla ilgili bir örnek verilmemektedir.\n- Çalışma Deneyimleri (0/20): Cevapta herhangi bir çalışma alanı veya konuyla bağı kurulmamıştır.\n\nToplam : 0 Puan"
+  },
+  "source_file": "konusma_metni.txt"
+}

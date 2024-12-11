@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T21:29:49.047876",
+  "question_id": "6757358e263fae1699dbc2d2",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Genel ve Doğru Bilgi (45/50): Konuşmacı, Java'nın bir programlama dili olduğunu ve onun ne olduğunu dikkatlice açıklar. Ancak, Java'nın derlenmiş ve yorumlanmış olduğunu belirtiyor ki bu bilgi tamamen doğru değil. Java, derlenmiş bir dildir ancak kod JVM (Java Virtual Machine) üzerinde yürütülür. \n\nÖrneklerle Anlatım (30/30): Konuşmacı, Java'nın farklı durumlarda ve farklı aygıtlarda nasıl kullanıldığını çok sayıda örnekle anlatır: mobil uygulamalar, internet üzerinden alışveriş, barkod yönetimi, Yapay Zeka, Big data ve diğer birçok örnek vermiştir. Bu, dinleyicinin Java'nın kullanım alanlarını daha net anlamasını sağlar.\n\nÇalışma Deneyimleri (20/20): Konuşmacının metnin sonlarına doğru kendi deneyiminden bahsettiğini görüyoruz. Staj yaptığında mobil uygulama geliştirdiğini ve bu sırada Java'nın özelliklerinden faydalandığını açıklar.\n\nToplam: 45+30+20 = 95/100\nKonuşma, genel olarak bilgilendiricidir. Java'nın nasıl çalıştığı ve farklı durumlarda nasıl kullanıldığını iyi bir şekilde aktarır. Ancak bazı küçük yanlış bilgiler olduğu için tam puanı alamaz."
+  },
+  "source_file": "konusma_metni.txt"
+}

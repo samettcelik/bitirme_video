@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T23:19:57.453747",
+  "question_id": "67574fc2263fae1699dbc303",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Genel ve Doğru Bilgi (25 puan): Evet, Python bir programlama dili olarak tanımlanmıştır ancak diğer bilgiler eksik.\nÖrneklerle Anlatım (0 puan): Herhangi bir örnek verilmedi.\nÇalışma Deneyimleri (0 puan): Kendi deneyimlerinden veya bilgisiyle ilgili herhangi bir bilgi verilmedi.\n\nToplam: 25 Puan"
+  },
+  "source_file": "konusma_metni.txt"
+}

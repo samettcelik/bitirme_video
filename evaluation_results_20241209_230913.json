@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T23:09:13.307729",
+  "question_id": "67574d27263fae1699dbc2f7",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (30 puan): Cevap, Python'ın bir programlama dili olduğunu ve kullanım alanlarını belirtiyor. Ancak, konuşmanın bazı yerlerinde dil hataları ve eksiklikler nedeniyle, bazı bilgiler netlikten yoksun ve yanıltıcı olabilir. Düşük skor, bu hatalar ve net olmayan bilgi nedeniyledir.\n- Örneklerle Anlatım (20 puan): Konuşma metninde Python'un kullanım alanlarına ilişkin örnekler var, ancak bunlar, dil hataları ve belirsizlikler nedeniyle genel açıklamadan tamamen anlaşılamaz hale geldiği için tam puan alamaz.\n- Çalışma Deneyimleri (0 puan): Cevapta çalıştığı alanlardan ve kendisinin bu konuyla olan bağlantısından bahsedilmiyor. \n\nToplam Puan: 50/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

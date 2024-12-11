@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T21:29:36.308518",
+  "question_id": "6757358e263fae1699dbc2d2",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (45/50): Verilen bilgi genellikle doğru ve soruya uygun. Ancak, bazı yanıltıcı ifadeler mevcut. Örneğin, Java'nın en eski dillerden biri olduğu belirtilmiş ancak Java'nın kesinlikle en eski dillerden biri olmadığı (Fortran, COBOL, BASIC vardır) bilinmektedir. Ayrıca, Java'nın kullanım alanları doğru sıralanmış olsa da, belirtilen özelliklerin biraz daha detaylandırılması gerekiyordu.\n- Örneklerle Anlatım (25/30): Java'nın kullanıldığı alanlar ve özellikleri örneklendirilmiştir. Bunun yanı sıra, kişinin kendi deneyimleri üzerinden bir mobil uygulamanın nasıl geliştirildiğine dair detaylıca anlatılmıştır.\n- Çalışma Deneyimleri (10/20): Kişi, kendi deneyimleri bahsedilmiştir ve Java'nın bir bölümünde kullanıldığı belirtilmiştir. Ancak, bu deneyimin tam olarak ne olduğu veya nereden geldiği konusunda daha fazla ayrıntı sağlanabilir.\n\nToplam Skor: 45+25+10 = 80/100."
+  },
+  "source_file": "konusma_metni.txt"
+}

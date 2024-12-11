@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T20:44:19.524075",
+  "question_id": "6759ce475ba5382b175ef1a8",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (0 puan): Konuşma metni anlaşılmaz. Soruya verilen cevapla ilgisi yok ve genel olarak bilgi vermiyor.\n- Örneklerle Anlatım (0 puan): Konuyu bir örnek vererek anlattığına dair hiçbir izlenim yok.\n- Çalışma Deneyimleri (0 puan): Cevapta çalıştığı alanlardan veya kendisinin konuyla bağlantısından bahsetmiyor. \n\nToplam: 0 puan\n"
+  },
+  "source_file": "konusma_metni.txt"
+}

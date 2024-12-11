@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T19:14:08.362686",
+  "question_id": "67570b43263fae1699dbc29a",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (45/50): Python'ın kullanım alanları hakkında genel bir bilgi verilmiş. Ancak, birkaç teknik hatadan (kitaplık isimlerinin yanlış çevrilmesi gibi) dolayı tam puan verilemez.\n- Örneklerle Anlatım (30/30): Python'un endüstriyel otomasyon, web geliştirme, makine öğrenme, bilimsel hesaplamalar ve oyun geliştirme alanlarında nasıl kullanıldığına dair örnekler verilmiş ve bu örneklerin detaylarıyla da açıklanmış.\n- Çalışma Deneyimleri (0/20): Konuşma metninde kişinin çalışma deneyimlerinden veya konuyu nasıl bağdaştırdığından hiç bahsetmemiş.\n\nTOPLAM PUAN: 75/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

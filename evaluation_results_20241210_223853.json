@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-10T22:38:53.211539",
+  "question_id": "67589704795a0b1edb52b259",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu konuşma metni, verilen kriterlere göre değerlendirilemez çünkü söz konusu soru belirsizdir ve konuşma metni de bir soruya cevap vermiyor, genel geçer bir bilgi sunmuyor ya da bir konuyu örneklendirmiyor. Ayrıca, konuşma metni konuşmacının çalışma deneyimlerinden veya kişisel bağlantısından bahsetmiyor. Bu nedenle, bu metne puan verilemiyor. \n\nGenel ve Doğru Bilgi: 0/50\nÖrneklerle Anlatım: 0/30\nÇalışma Deneyimleri: 0/20\n\nToplam: 0/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

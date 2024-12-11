@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T21:29:26.925288",
+  "question_id": "6757358e263fae1699dbc2d2",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (40 puan): Cevap, Java'nın bir programlama dili olduğunu ve çok çeşitli uygulamalar ve platformlar için kullanıldığını doğru bir şekilde belirtmektedir. Fakat bazı ayrıntıları eksik veya yanıltıcıdır. Örneğin, Java'nın iki aşamalı bir yazılım dili olduğunu belirtir, bu genelde doğru olmasına rağmen bu detayın tamamen net olmadığını söyleyebiliriz. Ayrıca, Java'nın en eski programlama dillerinden olduğunu belirterek hatalı bir bilgi veriyor.\n\n- Örneklerle Anlatım (30 puan): Konuşma metninde, Java'nın günlük hayatta (mobil uygulama geliştirme, barkod yönetim uygulamaları vs.) nerede ve nasıl kullanıldığına dair geniş ve çeşitli örnekler verilmiştir.\n\n- Çalışma Deneyimleri (20 puan): Konuşmacı, staj yeri ve okul projeleri üzerinde Java kullanarak deneyim kazandığını belirtmiştir. Java'yı kullanarak bir barkod yönetim uygulaması ve diğer uygulamaları geliştirdiğini anlatmıştır. \n\nToplam Puan: 90/100"
+  },
+  "source_file": "konusma_metni.txt"
+}

@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-09T18:27:52.709332",
+  "question_id": "67570b43263fae1699dbc29a",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "- Genel ve Doğru Bilgi (50 puan): 45/50\nKonuşmacı, Python hakkında genel bilgileri sunuyor, bu dilin esnek kullanımı, okunabilirliği, modülleri ve nasıl yaygın bir şekilde kullanıldığı hakkında ayrıntılar veriyor. Ancak konuşma bazen net olmadığından, bazı bilgiler biraz belirsiz kalıyor.\n\n- Örneklerle Anlatım (30 puan): 20/30\nKonuşmacı Python'un kullanım alanları hakkında ve ayrıca Python ile olan kişisel deneyimleri hakkında örnekler vermiş, ancak sunduğu bazı örnekler eksik veya belirsiz.\n\n- Çalışma Deneyimleri (20 puan): 20/20\nKonuşmacı, Python'un kendi deneyimlerinde nasıl kullanıldığını ve ne kadar yararlı olduğunu belirtmiştir.\n\nToplam puan: 85/100 \nKonuşma, genel ve doğru bilgi bakımından iyi bir lavoro yapıyor ve konuşmacının çalışma deneyimlerini sunuyor, ancak verilen bilgilerin yanı sıra, sunulan örnekler daha spesifik ve bilgilendirici olabilir ve konuşmanın genel anlaşılırlığı geliştirilebilir."
+  },
+  "source_file": "konusma_metni.txt"
+}

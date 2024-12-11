@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-10T19:15:05.946261",
+  "question_id": "675867328a4f58758cc843f7",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu konuşma metni, belirtilen sorunun cevabı olarak değerlendirilemez çünkü soru (\"q\") belirgin ve anlaşılır bir içerik taşımamaktadır. Bu durum, konuşma metninin değerlendirilmesini imkansız kılar.\n\n- Genel ve Doğru Bilgi (0 puan): Soruyu anlamak mümkün olmadığı için cevabın doğruluğunu ya da soruya uygunluğunu değerlendiremeyiz.\n- Örneklerle Anlatım (0 puan): Benzer şekilde, spesifik bir soru olmadığı için verilen cevapta belirli bir konunun örneklendirildiğini söyleyemeyiz.\n- Çalışma Deneyimleri (0 puan): Konuşma, belirli bir alan hakkında deneyim paylaşımı içermemekte veya konuşmacının kendi deneyimleriyle bağlantı kurmamaktadır.\n\nToplam : 0 puan"
+  },
+  "source_file": "konusma_metni.txt"
+}

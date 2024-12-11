@@ -1,0 +1,9 @@
+{
+  "timestamp": "2024-12-11T00:28:53.040891",
+  "question_id": "6758b16078417637000f960a",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Bu metin, belirtilen kriterlere göre değerlendiremeye uygun değil çünkü cevap, sorulan soruyla alakasız. Bu yüzden aşağıdaki puanlamayı yapmak:\n\n- Genel ve Doğru Bilgi (50 puan): Metin, soruyla ilgili hiçbir bilgi içermiyor. Puan: 0.\n- Örneklerle Anlatım (30 puan): Herhangi bir örnek verilmiyor ve konunun ne olduğu belirsiz. Puan: 0.\n- Çalışma Deneyimleri (20 puan): Spektrumla ilgili herhangi bir çalışma deneyiminden bahsedilmiyor. Puan: 0.\n\nToplam: 0 Puan."
+  },
+  "source_file": "konusma_metni.txt"
+}
