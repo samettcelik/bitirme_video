@@ -1,0 +1,10 @@
+{
+  "timestamp": "2024-12-12T23:36:26.639761",
+  "question_id": "675b47ef0da3ced41ccdd816",
+  "user_id": null,
+  "evaluation": {
+    "evaluation": "Konuşma metni soruyla hiçbir şekilde bağlantılı değil çünkü afa kelimesi bir soru veya konu belirlemiyor. Ayrıca konuşma metni de genel ve doğru bir bilgi vermiyor. Örneklerle anlatım veya çalışma deneyimleri ile ilgili hiçbir bilgi verilmiyor. Dolayısıyla bu konuşmayı aşağıdaki puanlarla değerlendirebiliriz:\n\n- Genel ve Doğru Bilgi: 0/50\n- Örneklerle Anlatım: 0/30\n- Çalışma Deneyimleri: 0/20\n\nToplam : 0 puan",
+    "total_score": 0
+  },
+  "source_file": "konusma_metni.txt"
+}

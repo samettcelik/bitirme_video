@@ -4,14 +4,28 @@ import json
 from flask import jsonify
 from datetime import datetime
 import requests
+import re
+
 class QuestionEvaluator:
     def __init__(self, api_key):
         self.client = OpenAI(api_key=api_key)
         self.transcript_file = "konusma_metni.txt"
         self.output_file = "degerlendirme_raporu.txt"
         
+    def extract_total_score(self, evaluation_text):
+        """Extract the total score from evaluation text."""
+        try:
+            # Look for patterns like "Toplam: 85" or "Toplam Puan: 85"
+            matches = re.findall(r'Toplam\s*:?\s*(\d+)', evaluation_text)
+            if matches:
+                return int(matches[-1])  # Return the last matched number
+            return None
+        except Exception as e:
+            print(f"Error extracting score: {e}")
+            return None
+
     def evaluate_speech(self, question_text=None):
-        """Evaluate speech with improved error handling"""
+        """Evaluate speech with improved error handling and score extraction"""
         if not question_text:
             return {"error": "Question text is required"}
             
@@ -33,6 +47,7 @@ class QuestionEvaluator:
             
             Not: Bu bir konuşmadan çevrilmiş metin olduğu için eksik devrik yanlış kelime ve cümlelere tolerans gösterilmelidir.
             Toplam Puanı Yazmayı Unutma ! En sona Toplam : Aldığı Puan
+
             Soru: {question_text}
             
             Konuşma Metni: {transcript}
@@ -48,13 +63,21 @@ class QuestionEvaluator:
             )
 
             result = response.choices[0].message.content
+            
+            # Extract and display total score
+            total_score = self.extract_total_score(result)
+            if total_score is not None:
+                print(f"\nToplam Puan: {total_score}")
 
             # Save the evaluation to file
             with open(self.output_file, "w", encoding="utf-8") as file:
                 file.write(result)
 
-            return {"evaluation": result}
-
+            return {
+                "evaluation": result,
+                "total_score": total_score
+            }
+            
         except Exception as e:
             return {"error": f"Evaluation error: {str(e)}"}
 

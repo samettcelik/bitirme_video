@@ -25,7 +25,7 @@ from question_evaluator import QuestionEvaluator
 
 
 
-evaluator = QuestionEvaluator(api_key="APIKEY")
+evaluator = QuestionEvaluator(api_key="API_KEY")
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -361,7 +361,7 @@ def video_analysis(round_count):
                                 
                                 # Stress score güncelleme
                                 if face_emotion in ["Happy", "Surprise", "Neutral"]:
-                                    stress_score += 1
+                                    stress_score += 1.5
                                 elif face_emotion in ["Angry", "Disgust", "Fear", "Sad"]:
                                     stress_score -= 1
                 
@@ -456,62 +456,64 @@ def start_analysis():
             "status": "error",
             "message": str(e)
         })
+# Backend - app.py'deki stop_analysis_route güncellemesi
 @app.route('/api/stop_analysis', methods=['GET', 'POST'])
 def stop_analysis_route():
-    global analysis_active, stop_analysis, speech_active
+    global analysis_active, stop_analysis, speech_active, stress_score
 
     try:
-        # Signal stop
         stop_analysis = True
         
-        # Wait for speech recognition to complete (max 5 seconds)
         wait_start = time.time()
         while speech_active and time.time() - wait_start < 5:
             time.sleep(0.1)
 
-        # Force stop if still active
         speech_active = False
         analysis_active = False
 
-        # Get request data
-        if request.is_json:
-            data = request.get_json()
-        else:
-            data = {}
-
+        data = request.get_json() if request.is_json else {}
         question_text = data.get('questionText', '')
         question_id = data.get('questionId', '')
         user_id = data.get('userId', '')
 
-        # Small delay to ensure file writing is complete
-        time.sleep(1)
+        # Analiz sonuçlarını hazırla
+        analysis_data = {
+            "stress_score": stress_score,
+            "match_bonus": match_count * 1,
+            "general_score": min(100, stress_score + (match_count * 1)),
+            "total_analyses": total_analyses,
+            "match_count": match_count
+        }
 
-        if not os.path.exists("konusma_metni.txt"):
-            return jsonify({
-                "status": "success",
-                "message": "Analiz durduruldu fakat konuşma metni bulunamadı",
-                "evaluation": None
-            })
-
-        # Evaluate speech if we have question text
-        if question_text:
+        evaluation_data = None
+        if os.path.exists("konusma_metni.txt") and question_text:
             evaluation_results = evaluator.evaluate_speech(question_text)
             if "error" not in evaluation_results:
-                saved_results = evaluator.save_results(
-                    evaluation_results,
-                    question_id,
-                    user_id
-                )
+                evaluation_data = evaluation_results
+
+                # Değerlendirme raporunu oku
+                report_text = ""
+                try:
+                    with open("degerlendirme_raporu.txt", "r", encoding="utf-8") as f:
+                        report_text = f.read()
+                except Exception as e:
+                    print(f"Rapor okuma hatası: {e}")
+
                 return jsonify({
                     "status": "success",
-                    "message": "Analiz başarıyla tamamlandı ve değerlendirildi",
-                    "evaluation": saved_results
+                    "message": "Analiz tamamlandı",
+                    "emotion_analysis": analysis_data,
+                    "evaluation": {
+                        "evaluation_text": evaluation_results.get("evaluation", ""),
+                        "total_score": evaluation_results.get("total_score", 0),
+                        "report_text": report_text
+                    }
                 })
 
         return jsonify({
             "status": "success",
-            "message": "Analiz durduruldu",
-            "evaluation": None
+            "message": "Analiz tamamlandı",
+            "emotion_analysis": analysis_data
         })
 
     except Exception as e:
@@ -522,7 +524,6 @@ def stop_analysis_route():
         }), 500
 
     finally:
-        # Ensure analysis is always stopped
         analysis_active = False
         stop_analysis = True
         speech_active = False
@@ -586,4 +587,4 @@ if __name__ == "__main__":
     with open(output_file, "w", encoding="utf-8") as file:
         file.write("Analiz Sonuçları:\n\n")
     
-    app.run(debug=True, threaded=True)
+    app.run(debug=True, threaded=True)  

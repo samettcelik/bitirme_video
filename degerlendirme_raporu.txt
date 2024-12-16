@@ -1,11 +1,7 @@
-Bu konuşma metni, belirtilen kriterler doğrultusunda aşağıdaki şekilde değerlendirebiliriz:
+Cevap değerlendirme metnine uygun formatta olmadığı için aşağıdaki gibi bir değerlendirme yapılır.
 
-- Genel ve Doğru Bilgi (0/50): Soru metni bulunmadığı için konuşma metninin bu kritere uygun olup olmadığını değerlendirmek imkansız. Ayrıca, metinde net bir bilgi veya konuşulan konu da mevcut değil.
+- Genel ve Doğru Bilgi (0/50): Verilen metnin bir cevap olmadığı ve sorudan bağımsız olduğu görülmektedir.
+- Örneklerle Anlatım (0/30): Metin bir argüman veya fikir sunduğu için bir örnekleme veya anlatım içermez.
+- Çalışma Deneyimleri (0/20): Hiçbir deneyim veya kişisel bilgi verilmemektedir.
 
-- Örneklerle Anlatım (0/30): Konuşma metninde örnek vererek anlatılan herhangi bir konu bulunmuyor.
-
-- Çalışma Deneyimleri (0/20): Konuşma metninde konuşmacının çalıştığı alanlardan veya kendisinin konularla bağlantısından herhangi bir şekilde bahsedilmiyor.
-
-- Not: Bu metinde ki dilbilgisi ve cümle kalıpları çok yanıltıcı ve düzensiz. Anlama katkı sağlamaz, inceleme veya tolerans gerektirmez.
-
-Toplam : 0 puan
+Toplam: 0/100
